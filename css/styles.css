@@ -1,0 +1,244 @@
+:root {
+    --main-bgc-color:#FFFFFF;
+    --title-and-top-color:#303030;
+    --text-and-bottom-color:#555555;
+    --contacts-and-prices-color:#9DA4BD;
+    --accent-color:#FF6C00;
+    --prices-top-text:rgba(157, 164, 189, 0.6);
+}
+
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
+body {
+    background-color:var(--main-bgc-color);
+    font-family:"Open sans", sans-serif;
+}
+.list {
+    list-style: none;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.top-text {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color:var(--title-and-top-color)
+}
+
+.title {
+    font-family: 'Raleway';
+    font-size: 42px;
+    line-height: 1.17;
+    letter-spacing: 0.05em;
+    color:var(--title-and-top-color)
+}
+
+.bottom-text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+}
+
+.button {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;  
+}
+/* -------------------------HEADER----------------------> */
+.header {
+    background-color:grey;
+}
+
+.header-link {
+font-weight: 600;
+font-size: 12px;
+line-height: 1.33;
+letter-spacing: 0.1em;
+color:var(--main-bgc-color);
+}
+.header-link.current {
+    color: var(--accent-color);
+}
+
+.header-link.tel {
+text-transform: uppercase;    
+}
+
+.header-link:hover,
+.header-link:focus,
+.yout-insta-link:hover,
+.yout-insta-link:focus {
+    cursor: pointer;
+    color: var(--accent-color);
+}
+/* < !-----------YOUTUBE-INSTA-LINKS------------- --> */
+.yout-insta-link {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.2em;
+    color:var(--title-and-top-color);
+}
+
+.yout-insta-link.current{
+    color: var(--accent-color);
+}
+/* < !---------------HERO---------------- --> */
+.hero {
+    background-color: grey;
+}
+.hero-top-text {
+    color: var(--prices-top-text);
+}
+.hero-title {
+    font-size: 72px;
+    line-height: 1.18;
+    color: var(--main-bgc-color);
+}
+.hero-bottom-text {
+    color: var(--contacts-and-prices-color);
+}
+/* ----------------------ABOUT-US---------------------- */
+.about-bottom-text {
+    color: var(--text-and-bottom-color);
+}
+.about-descr {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.86;
+    letter-spacing: 0.02em;
+    color: var(--text-and-bottom-color)
+
+}
+
+/* -----------------------PRICES------------------------ */
+.prices {
+    background-color: grey;
+}
+
+.prices-top-text {
+    color:var(--prices-top-text)
+}
+
+.prices-title {
+    color: var(--main-bgc-color);
+}
+
+.prices-item-text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+    color:var(--contacts-and-prices-color);
+}
+/* --------------STATISTICS-------------------- */
+
+.statistics-item-count {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color:var(--title-and-top-color);
+}
+
+.statistics-item-descr {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    text-align: center;
+    color: var(--title-and-top-color);
+}
+
+.statisctics-bottom-text {
+    color: var(--text-and-bottom-color);
+}
+/* --------------MASTERS------------------- */
+
+.masters-name {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.39;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color:var(--title-and-top-color)
+}
+
+.masters-position {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color:var(--accent-color)
+}
+/* --------------------GALLERY-------------------- */
+/* ------------------ONLINE-APPOINTMENT------------*/
+
+.appoitment {
+    background-color: grey;
+}
+
+.appointment-title {
+    color: var(--main-bgc-color);
+}
+/* ----------------CONTACTS------------------------- */
+
+.contacts {
+    background-color: grey;
+}
+
+.contacts-title {
+    color: var(--main-bgc-color);
+}
+
+.address-link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+    color: var(--contacts-and-prices-color);
+
+}
+
+.address-link:hover,
+.address-link:focus {
+    cursor: pointer;
+    color: var(--accent-color);
+}
+
+.opening-hours.top-text {
+    color: var(--main-bgc-color)
+        }
+
+.opening-hours {
+    color: var(--contacts-and-prices-color);
+}
+/* -------------------FOOTER---------------- */
+.copyright {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.2em;
+    color: #9DA4BD;
+}
