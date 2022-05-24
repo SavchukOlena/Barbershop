@@ -5,6 +5,21 @@
     --contacts-and-prices-color:#9DA4BD;
     --accent-color:#FF6C00;
     --prices-top-text:rgba(157, 164, 189, 0.6);
+    --typical-margin: 20px;
+}
+
+p, 
+h1, 
+h2, 
+h3, 
+h4 {
+    margin: 0;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
 }
 
 .visually-hidden {
@@ -24,12 +39,23 @@ body {
     background-color:var(--main-bgc-color);
     font-family:"Open sans", sans-serif;
 }
+
+.container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+    outline: 1px solid red;
+}
 .list {
     list-style: none;
 }
 
 .link {
     text-decoration: none;
+}
+img {
+    display:block;
 }
 
 .top-text {
@@ -57,6 +83,7 @@ body {
 }
 
 .button {
+    font-family: inherit;
     font-weight: 600;
     font-size: 12px;
     line-height: 1.33;
@@ -66,6 +93,8 @@ body {
 /* -------------------------HEADER----------------------> */
 .header {
     background-color:grey;
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
 
 .header-link {
@@ -90,7 +119,7 @@ text-transform: uppercase;
     cursor: pointer;
     color: var(--accent-color);
 }
-/* < !-----------YOUTUBE-INSTA-LINKS------------- --> */
+
 .yout-insta-link {
     font-weight: 600;
     font-size: 11px;
@@ -103,44 +132,70 @@ text-transform: uppercase;
     color: var(--accent-color);
 }
 /* < !---------------HERO---------------- --> */
-.hero {
+.hero-content {
     background-color: grey;
+    padding: 272px 96px 206px 96px;
 }
 .hero-top-text {
     color: var(--prices-top-text);
+    margin-bottom: var(--typical-margin);
 }
 .hero-title {
     font-size: 72px;
     line-height: 1.18;
     color: var(--main-bgc-color);
+    margin-bottom: var(--typical-margin);
 }
 .hero-bottom-text {
     color: var(--contacts-and-prices-color);
+    max-width: 444px;
 }
 /* ----------------------ABOUT-US---------------------- */
+.about {
+    padding-top: 169px;
+    padding-bottom: 91px;
+}
+.about-top-text {
+    margin-bottom: var(--typical-margin);
+}
+.about-title {
+    margin-bottom: var(--typical-margin);
+}
 .about-bottom-text {
     color: var(--text-and-bottom-color);
+    margin-bottom: var(--typical-margin);
 }
 .about-descr {
     font-weight: 400;
     font-size: 14px;
     line-height: 1.86;
     letter-spacing: 0.02em;
-    color: var(--text-and-bottom-color)
+    color: var(--text-and-bottom-color);
+    margin-bottom: 40px;
 
 }
 
 /* -----------------------PRICES------------------------ */
 .prices {
     background-color: grey;
+    padding-top: 130px;
+    padding-bottom: 130px;
 }
 
 .prices-top-text {
-    color:var(--prices-top-text)
+    color:var(--prices-top-text);
+    margin-bottom: var(--typical-margin);
+    
 }
 
 .prices-title {
     color: var(--main-bgc-color);
+    margin-bottom: 44px;
+}
+
+.prices-list {
+    padding: 30px 40px;
+    border: 1px solid greenyellow;
 }
 
 .prices-item-text {
@@ -150,12 +205,41 @@ text-transform: uppercase;
     letter-spacing: 0.02em;
     color:var(--contacts-and-prices-color);
 }
+.prices-item {
+    margin-bottom: 20px;
+}
+
+.prices-button {
+    color: var(--main-bgc-color);
+    background-color: grey;
+    margin: 0 auto;
+    padding: 12px 20px;
+    display: block;
+    margin-top: 62px;
+    border-radius: 25px;
+    border-color: var(--accent-color);
+}
+
+
 /* --------------STATISTICS-------------------- */
+
+.statistics{
+    padding-top: 143px;
+    padding-bottom: 137px;
+}
+
+.statistics-item {
+    width: 170px;
+    height: 133px;
+    border: 1px solid yellowgreen;
+    padding: 20px 24px;
+}
 
 .statistics-item-count {
     font-weight: 700;
     font-size: 42px;
     line-height: 1.36;
+    display: block;
     text-align: center;
     letter-spacing: 0.05em;
     color:var(--title-and-top-color);
@@ -169,10 +253,30 @@ text-transform: uppercase;
     color: var(--title-and-top-color);
 }
 
+.statisctics-top-text {
+    margin-bottom: var(--typical-margin);
+}
+
+.statisctics-title {
+    margin-bottom: var(--typical-margin);
+}
+
 .statisctics-bottom-text {
     color: var(--text-and-bottom-color);
 }
 /* --------------MASTERS------------------- */
+
+.masters {
+    padding: 130px 0px;
+}
+
+.masters-top-text {
+    margin-bottom: var(--typical-margin);
+}
+
+.masters-title {
+    margin-bottom: 44px;
+}
 
 .masters-name {
     font-weight: 400;
@@ -180,7 +284,9 @@ text-transform: uppercase;
     line-height: 1.39;
     text-align: center;
     letter-spacing: 0.02em;
-    color:var(--title-and-top-color)
+    color:var(--title-and-top-color);
+    margin-top: 30px;
+    margin-bottom: 8px;
 }
 
 .masters-position {
@@ -189,7 +295,8 @@ text-transform: uppercase;
     line-height: 1.36;
     text-align: center;
     letter-spacing: 0.02em;
-    color:var(--accent-color)
+    color:var(--accent-color);
+    margin-bottom: 30px;
 }
 /* --------------------GALLERY-------------------- */
 /* ------------------ONLINE-APPOINTMENT------------*/
