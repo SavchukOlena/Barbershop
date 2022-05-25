@@ -98,18 +98,18 @@ img {
 }
 
 .header-link {
-font-weight: 600;
-font-size: 12px;
-line-height: 1.33;
-letter-spacing: 0.1em;
-color:var(--main-bgc-color);
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.1em;
+    color:var(--main-bgc-color);
 }
 .header-link.current {
     color: var(--accent-color);
 }
 
 .header-link.tel {
-text-transform: uppercase;    
+    text-transform: uppercase;    
 }
 
 .header-link:hover,
