@@ -83,6 +83,12 @@ img {
 }
 
 .button {
+    min-width: 190px;
+    height: 40px;
+    border: 1px solid var(--accent-color);
+    border-radius: 25px;
+    padding: 0;
+
     font-family: inherit;
     font-weight: 600;
     font-size: 12px;
@@ -98,18 +104,36 @@ img {
     padding-bottom: 32px;
 }
 
-.header-link {
+.header-container {
+    display: flex;
+    align-items: center;
+}
+
+.header-list {
+    display: flex;
+}
+
+.header-link:not(:last-child) {
+    margin-right: 40px;
+}
+
+.logo {
+    margin-right: 70px;
+}
+
+.header  .link {
     font-weight: 600;
     font-size: 12px;
     line-height: 1.33;
     letter-spacing: 0.1em;
     color:var(--main-bgc-color);
 }
-.header-link.current {
+.header .link.current {
     color: var(--accent-color);
 }
 
 .header-link.tel {
+    margin-right: 60px;
     text-transform: uppercase;    
 }
 
@@ -119,6 +143,16 @@ img {
 .yout-insta-link:focus {
     cursor: pointer;
     color: var(--accent-color);
+}
+
+.header-connect {
+    margin-left: auto;
+}
+
+/* < !---------------HERO---------------- --> */
+
+.yout-insta-list {
+    width: 90px;
 }
 
 .yout-insta-link {
@@ -132,8 +166,13 @@ img {
 .yout-insta-link.current{
     color: var(--accent-color);
 }
-/* < !---------------HERO---------------- --> */
+
+.hero .container {
+    display: flex;
+}
+
 .hero-content {
+    flex-grow: 1;
     background-color: grey;
     padding: 272px 96px 206px 96px;
 }
@@ -156,6 +195,19 @@ img {
     padding-top: 169px;
     padding-bottom: 91px;
 }
+
+.about .container {
+    display: flex;
+}
+
+.about-list {
+    display: flex;
+    margin-right: 84px;
+}
+
+.about-pic + .about-pic {
+    margin-left: 30px;
+}
 .about-top-text {
     margin-bottom: var(--typical-margin);
 }
@@ -167,16 +219,24 @@ img {
     margin-bottom: var(--typical-margin);
 }
 .about-descr {
+    margin-bottom: 50px;
+
     font-weight: 400;
     font-size: 14px;
     line-height: 1.86;
     letter-spacing: 0.02em;
     color: var(--text-and-bottom-color);
-    margin-bottom: 40px;
+    
 
 }
 
 /* -----------------------PRICES------------------------ */
+
+.prices-wrap {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
 .prices {
     background-color: grey;
     padding-top: 130px;
@@ -196,6 +256,8 @@ img {
 
 .prices-list {
     padding: 30px 40px;
+    width: 50%;
+
     border: 1px solid greenyellow;
 }
 
@@ -207,7 +269,13 @@ img {
     color:var(--contacts-and-prices-color);
 }
 .prices-item {
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 20px;
+}
+
+.prices-item:last-child {
+    margin-bottom: 0;
 }
 
 .prices-button {
@@ -216,7 +284,6 @@ img {
     margin: 0 auto;
     padding: 12px 20px;
     display: block;
-    margin-top: 62px;
     border-radius: 25px;
     border-color: var(--accent-color);
 }
@@ -268,7 +335,8 @@ img {
 /* --------------MASTERS------------------- */
 
 .masters {
-    padding: 130px 0px;
+    padding: 130px 0 204px 0;
+    background-color: #F7F7F7;
 }
 
 .masters-top-text {
@@ -279,6 +347,23 @@ img {
     margin-bottom: 44px;
 }
 
+.masters-list {
+    display: flex;
+}
+
+.masters-item {
+    width: calc((100% - 60px) / 3);
+}
+
+.masters-item + .masters-item {
+    margin-left: 30px;
+}
+
+.masters-img {
+    margin-bottom: 30px;
+}
+
+
 .masters-name {
     font-weight: 400;
     font-size: 18px;
@@ -286,7 +371,6 @@ img {
     text-align: center;
     letter-spacing: 0.02em;
     color:var(--title-and-top-color);
-    margin-top: 30px;
     margin-bottom: 8px;
 }
 
@@ -297,13 +381,44 @@ img {
     text-align: center;
     letter-spacing: 0.02em;
     color:var(--accent-color);
-    margin-bottom: 30px;
 }
 /* --------------------GALLERY-------------------- */
+.gallery {
+    padding-top: 130px;
+    padding-bottom: 130px;
+}
+
+.gallery-top-text {
+    padding-bottom: 44px;
+}
+
+.gallery-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gallery-item {
+    width: calc((100% - 90px) / 4);
+    
+}
+
+.gallery-item:not(:nth-child(4n)) {
+    margin-right: 30px;
+}
+
 /* ------------------ONLINE-APPOINTMENT------------*/
 
+.form-contacts {
+    
+    background-color: #191C26;
+}
+
+.form-contacts .container {
+    display: flex;    
+}
+
 .appoitment {
-    background-color: grey;
+    width: 50%;
 }
 
 .appointment-title {
@@ -312,10 +427,12 @@ img {
 /* ----------------CONTACTS------------------------- */
 
 .contacts {
-    background-color: grey;
+    width: 50%;
+    padding: 130px 265px 130px 100px;
 }
 
 .contacts-title {
+    margin-bottom: 40px;
     color: var(--main-bgc-color);
 }
 
@@ -326,7 +443,18 @@ img {
     line-height: 1.67;
     letter-spacing: 0.02em;
     color: var(--contacts-and-prices-color);
+}
 
+.address {
+    margin-bottom: 20px;
+}
+
+.tel {
+    margin-bottom: 20px;
+}
+
+.e-mail {
+    margin-bottom: 70px;
 }
 
 .address-link:hover,
@@ -336,10 +464,11 @@ img {
 }
 
 .opening-hours.top-text {
+    margin-bottom: 20px;
     color: var(--main-bgc-color)
         }
 
-.opening-hours {
+.hours {
     color: var(--contacts-and-prices-color);
 }
 /* -------------------FOOTER---------------- */
