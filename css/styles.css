@@ -109,11 +109,15 @@ img {
     line-height: 1.33;
     letter-spacing: 0.09em;
     text-transform: uppercase; 
+    cursor: pointer;
     
 }
 /* -------------------------HEADER----------------------> */
 .header {
-    background-color:grey;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color:transparent;
     padding-top: 32px;
     padding-bottom: 32px;
 }
@@ -134,6 +138,7 @@ img {
 .header-link {
     padding-top: 48px;
     padding-bottom: 48px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-link:hover,
@@ -175,9 +180,35 @@ img {
 
 /* < !---------------HERO---------------- --> */
 
-.yout-insta-list {
+.hero-soc {
     width: 90px;
+    display: flex;
+    align-items: flex-end;
+    padding-left: 22px;
+    padding-bottom: 33px;
 }
+
+.yout-insta-list {
+    display: flex;
+    align-items: center;  
+    
+    transform: rotate(-90deg) translate(-19px);
+    transform-origin: top left;  
+}
+
+.yout-insta-item + .yout-insta-item {
+    margin-left: 40px;
+}
+
+.yout-insta-list::before {
+    content: '';
+    display: block;
+    margin-right: 40px;
+    width: 60px;
+    height: 1px;
+    background-color: var(--title-and-top-color);
+}
+
 
 .yout-insta-link {
     font-weight: 600;
@@ -185,6 +216,12 @@ img {
     line-height: 1.36;
     letter-spacing: 0.2em;
     color:var(--title-and-top-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.yout-insta-link:hover,
+.yout-insta-link:focus {
+    color: var(--accent-color);
 }
 
 .yout-insta-link.current{
@@ -501,8 +538,15 @@ img {
 /* ------------------ONLINE-APPOINTMENT------------*/
 
 .form-contacts {
-    
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-top: 130px;
+    padding-bottom: 130px;
     background-color: #191C26;
+    background-image: url(../images/contacts-bg.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: calc(50% - 15px);
 }
 
 .form-contacts .container {
@@ -510,7 +554,7 @@ img {
 }
 
 .appoitment {
-    width: 50%;
+    width: calc(50% + 15px);
 }
 
 .appointment-title {
@@ -519,8 +563,8 @@ img {
 /* ----------------CONTACTS------------------------- */
 
 .contacts {
-    width: 50%;
-    padding: 130px 265px 130px 100px;
+    width: calc(50% - 15px);
+    padding-left: 100px;
 }
 
 .contacts-title {
@@ -529,6 +573,7 @@ img {
 }
 
 .address-link {
+    
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -537,17 +582,27 @@ img {
     color: var(--contacts-and-prices-color);
 }
 
-.address {
+.address-item:not(:last-child) {
     margin-bottom: 20px;
 }
 
-.tel {
-    margin-bottom: 20px;
-}
-
-.e-mail {
+.address-list {
     margin-bottom: 70px;
 }
+
+.address-item {
+    display: flex;
+    align-items: center;
+    color: var(--contacts-and-prices-color);
+}
+
+.address-icon {
+    margin-right: 16px;
+    fill: currentColor;
+}
+
+
+
 
 .address-link:hover,
 .address-link:focus {
@@ -571,3 +626,137 @@ img {
     letter-spacing: 0.2em;
     color: var(--contacts-and-prices-color);
 }
+
+/* < !-- -----Modal------ --> */
+
+.backdrop {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.modal {
+    position: absolute;
+    min-width: 528px;
+    height: 581px;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    padding: 40px;
+    border-radius: 4px;
+    background-color: var(--main-bgc-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+
+}
+
+.modal-close {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 96%;
+    top: -2%;
+    margin: 0;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    color: var(--title-and-top-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    background-color: var(--main-bgc-color);
+    cursor: pointer;
+}
+
+.modal-icon {
+    fill: currentColor;
+}
+
+
+/* ----Modal-form----- */
+.modal-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-align: center;
+}
+
+.form-field {
+    position: relative;
+    margin-top: 38px;
+    color: var(--title-and-top-color);
+}
+
+.form-input {
+    display: block;
+    min-width: 472px;
+    height: 40px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-left: 54px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    
+}
+
+.form-label {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 42px;
+    transform: translateY(-50%);
+    color: var(--title-and-top-color);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    fill: currentColor;
+    transform: translateY(-50%);
+
+
+}
+
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+    transform: translate(-30px, -44px);
+    color: var(--accent-color);
+}
+
+.form-input:focus ~ .form-icon,
+.form-input:not(:placeholder-shown) ~ .form-icon {
+    fill: var(--accent-color);
+}
+
+.form-input.comment {
+    resize: none;
+    min-height: 120px;
+}
+.comment::placeholder {
+    /* padding: 12px; */
+}
+
+.form-label.comment {
+    position: static;
+    margin-left: 12px;
+}
+
+
+
+
+
+
+

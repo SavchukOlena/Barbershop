@@ -27,7 +27,7 @@
             </nav>
             <div class="header-connect">
                 <a class="header-link tel link" href="tel:+380441111111">+38 044 111 11 11</a>
-                <button type="button" class="header-button button">Online appointment</button>
+                <button data-modal-open type="button" class="header-button button">Online appointment</button>
             </div>
             
         </div>        
@@ -36,12 +36,14 @@
         <!-- ----------------------------HERO---------------------------------- -->
         <section class="hero">
             <div class="container">
-                <ul class="yout-insta-list list">
-                    <li class="yout-insta-item"><a class=" yout-insta-link link" href="https://www.instagram.com/" target="_blank"
-                            rel="noopener nofollow noreferrer">Instagram</a></li>
-                    <li class="yout-insta-item"><a class="yout-insta-link current link" href="https://www.youtube.com/" target="_blank"
-                            rel="noopener nofollow noreferrer">Youtube</a></li>
-                </ul>
+                <div class="hero-soc">
+                    <ul class="yout-insta-list list">
+                        <li class="yout-insta-item"><a class=" yout-insta-link link" href="https://www.instagram.com/" target="_blank"
+                                rel="noopener nofollow noreferrer">Instagram</a></li>
+                        <li class="yout-insta-item"><a class="yout-insta-link current link" href="https://www.youtube.com/" target="_blank"
+                                rel="noopener nofollow noreferrer">Youtube</a></li>
+                    </ul>
+                </div>
                 <div class="hero-content">
                     <p class="hero-top-text top-text">A hair salon for men in Kyiv</p>
                     <h1 class="hero-title title">BarberShop</h1>
@@ -307,13 +309,17 @@
                     <h2 class="contacts-title title">Contacts</h2>
                     <address>
                         <ul class="address-list list">
-                            <li class="address"><a class="address-link link" id="contacts" href="https://goo.gl/maps/s6267vZQV6m6oPc67" target="_blank"
+                            <li class="address-item"><a class="address-link link" id="contacts" href="https://goo.gl/maps/s6267vZQV6m6oPc67" target="_blank"
                                     rel="noopener noreferrer nofollow">7a Vasylkivska st. <br>
                                     Kyiv, 08132</a>
                             </li>
-                            <li class="tel"><a class="address-link link" href="tel:+380441111111">+38 044 111 11 11</a>
+                            <li class=" address-item">
+                                <svg class="address-icon" width="24" height="24">
+                                    <use href="./images/symbol-defs.svg#icon-phone"></use>
+                                </svg>                                
+                                <a class="address-link link" href="tel:+380441111111">+38 044 111 11 11</a>
                             </li>
-                            <li class="e-mail"><a class="address-link" href="mailto:barbershop@email.com">barbershop@email.com</a>
+                            <li class=" address-item"><a class="address-link" href="mailto:barbershop@email.com">barbershop@email.com</a>
                             </li>
                         </ul>
                     </address>
@@ -323,7 +329,7 @@
             </div>
             
         </section>
-        
+
     </main>
     <!-- --------------------------------FOOTER-------------------------------- -->
     <footer class="footer">
@@ -333,6 +339,54 @@
             <li><a class="yout-insta-link link" href="https://www.youtube.com/" target="_blank" rel="noopener nofollow noreferrer">Youtube</a></li>
         </ul>
     </footer>
-    
+    <!-- -----Modal------ -->
+    <div data-modal class="backdrop  is-hidden">
+        <div class="modal">
+            <button data-modal-close type="button" class="modal-close">
+                <svg class="modal-icon" width="18" height="18">
+                    <use href="./images/symbol-defs.svg#icon-close"></use>
+                </svg>
+            </button>
+            <!-- /* ----Modal-form----- */ -->
+            <form action="modal-form">
+                <b class="modal-title">Fill in the form, please. We'll call to you soon</b>
+                <div class="form-field">
+                    <input class="form-input" type="text" id="name" placeholder=" ">
+                    <label class="form-label" for="name">Name</label>
+                    <svg class="form-icon" width="18" height="18">
+                        <use href="./images/symbol-defs.svg#icon-person"></use>
+                    </svg>
+                </div>
+                <div class="form-field">
+                    <input class="form-input" type="tel" id="tel" placeholder=" ">
+                    <label class="form-label" for="tel">Phone number</label>
+                    <svg class="form-icon" width="18" height="18">
+                        <use href="./images/symbol-defs.svg#icon-phone"></use>
+                    </svg>
+                </div>
+                <div class="form-field">
+                    <input class="form-input" type="email" id="email" placeholder=" ">
+                    <label class="form-label" for="email">Email</label>
+                    <svg class="form-icon" width="18" height="18">
+                        <use href="./images/symbol-defs.svg#icon-email"></use>
+                    </svg>
+                </div>
+
+                <div class="form-field comment">
+                    <label class="form-label comment" for="comment">Commentary</label>
+                    <textarea class=" form-input comment" name="comment" id="comment" placeholder="Insert your commentary"></textarea>
+                </div>
+
+                
+                
+                
+            </form>
+            
+            
+
+        </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
 </body>
 </html>
