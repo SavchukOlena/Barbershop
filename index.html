@@ -349,7 +349,7 @@
             </button>
             <!-- /* ----Modal-form----- */ -->
             <form action="modal-form">
-                <b class="modal-title">Fill in the form, please. We'll call to you soon</b>
+                <b class="modal-title">Fill in the form, please. We'll call you soon</b>
                 <div class="form-field">
                     <input class="form-input" type="text" id="name" placeholder=" ">
                     <label class="form-label" for="name">Name</label>
@@ -372,10 +372,27 @@
                     </svg>
                 </div>
 
-                <div class="form-field comment">
-                    <label class="form-label comment" for="comment">Commentary</label>
-                    <textarea class=" form-input comment" name="comment" id="comment" placeholder="Insert your commentary"></textarea>
+                <div class="modal-form__comment">
+                    <label class="modal-form__label" for="comment">Commentary</label>
+                    <textarea class="modal-from__input" name="comment" id="comment" placeholder="Insert your commentary"></textarea>
                 </div>
+
+                <!-- ------Checkbox----- -->
+                <div class="checkbox">
+                    <input class="checkbox__input" type="checkbox" id="checkbox" value="true">
+                    <label class="checkbox__label" for="checkbox">
+                        <span class="checkbox__span">
+                            <svg class="checkbox__icon" width="11" height="8">
+                                <use href="./images/symbol-defs.svg#icon-agree"></use>
+                            </svg>
+                        </span>
+                        I accept and agree the <a class="checkbox__link"
+                        href=""> User Policy Contract terms</a></label>
+                </div>
+
+                
+
+                <button class="button modal-form__button" type="submit">Online appointment</button>
 
                 
                 
