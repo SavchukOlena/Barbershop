@@ -5,6 +5,7 @@
     --contacts-and-prices-color:#9DA4BD;
     --accent-color:#FF6C00;
     --prices-top-text:rgba(157, 164, 189, 0.6);
+    --online-form-color:rgba(157, 164, 189, 0.4);
     --typical-margin: 20px;
 }
 
@@ -45,7 +46,7 @@ body {
     padding-left: 15px;
     padding-right: 15px;
     margin: 0 auto;
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
 }
 .list {
     list-style: none;
@@ -535,7 +536,7 @@ img {
     margin-right: 30px;
 }
 
-/* ------------------ONLINE-APPOINTMENT------------*/
+/* ---------------APPOINTMENT-FORM+CONTACTS--------------*/
 
 .form-contacts {
     max-width: 1280px;
@@ -551,15 +552,86 @@ img {
 
 .form-contacts .container {
     display: flex;    
+
+    /* --------APPOINTMENT------- */
 }
 
-.appoitment {
+.appointment {
     width: calc(50% + 15px);
 }
 
-.appointment-title {
+.appointment__title {
     color: var(--main-bgc-color);
 }
+
+
+.appointment__form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-right: 40px;
+    margin-top: 44px;
+}
+
+.appointment__wrap {
+    position: relative;
+    width: 270px;
+    margin-bottom: 44px;
+
+}
+.appointment__input {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--online-form-color);
+    color: #817d7d;
+    outline: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+.appointment__label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--online-form-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.appointment__wrap--broad {
+    width: 560px;
+}
+
+.appointment__input--broad {
+    width: 100%;
+    height: 76px;
+    resize: none;
+    
+}
+
+.appointment__input:focus {
+    border-color: var(--main-bgc-color);
+}
+
+
+.appointment__input:focus + .appointment__label,
+.appointment__input:not(:placeholder-shown) + .appointment__label {
+    color: var(--main-bgc-color);
+    transform: translateY(-100%);
+}
+
+.button--dark {
+    
+    color: var(--main-bgc-color);
+    background-color: transparent;
+}
+
+
 /* ----------------CONTACTS------------------------- */
 
 .contacts {
@@ -600,9 +672,6 @@ img {
     margin-right: 16px;
     fill: currentColor;
 }
-
-
-
 
 .address-link:hover,
 .address-link:focus {
@@ -674,7 +743,7 @@ img {
     border-radius: 50%;
     background-color: var(--main-bgc-color);
     cursor: pointer;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-icon {

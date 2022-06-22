@@ -295,14 +295,34 @@
                 </ul>
             </div>
         </section>
-        <!-- -------------------------------ONLINE-APPOINTMENT----------------------------- -->
+        <!-- -------------------------------APPOINTMENT-FORM + CONTACTS----------------------------- -->
         <section class="form-contacts">
             <div class="container">
                 <h1 class="visually-hidden">
                     Appointement form + contacts
                 </h1>
-                <section class="appoitment">
-                    <h2 class="appointment-title title">Online appointment</h2>
+                <!-- /* --------APPOINTMENT------- */ -->
+                
+                <section class="appointment">
+                    <h2 class="appointment__title title">Online appointment</h2>
+                    <form class="appointment__form">
+                        <div class="appointment__wrap">
+                            <input class="appointment__input" type="text" id="name" placeholder=" ">
+                            <label class="appointment__label" for="name">Name*</label>
+                        </div>
+
+                        <div class="appointment__wrap">
+                            <input class="appointment__input" type="text" id="tel" placeholder=" ">
+                            <label class="appointment__label" for="tel">Phone number*</label>
+                        </div>
+
+                        <div class="appointment__wrap appointment__wrap--broad">
+                            <textarea class="appointment__input appointment__input--broad" name="message" id="message" placeholder=" "></textarea>
+                            <label class="appointment__label appointment__label--broad " for="message">Message</label>
+                        </div>
+                        <button data-modal-open type="button" class="button button--dark">Send request</button>
+
+                    </form>
                 </section>
                 <!-- ----------------------------------CONTACTS---------------------------------------------- -->
                 <section class="contacts">
